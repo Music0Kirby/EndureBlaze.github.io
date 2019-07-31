@@ -59,15 +59,20 @@
   };
 </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="炎忍のBlog">
-<meta property="og:url" content="https://blog.endureblaze.cn/index.html">
+  <meta name="description" content="简介Material Design 2 (下面简称 MD2 )已经发布了一段时间了，可是还有一些小伙伴不知道怎么迁移到 MD2 来，我也是查了不少资料才摸索出来的         AndroidX首先，需要迁移到 AndroidX 来，这个网上有很多教程了，AS 和 IDEA 也有相关的功能，这里就不赘述了         修改主题然后，需要修改 styles.xml 中的内容了，修改你之前的主题">
+<meta name="keywords" content="Material Design 2,踩坑">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何优雅的使用 Material Design 2">
+<meta property="og:url" content="https://blog.endureblaze.cn/posts/9cb48aa5/index.html">
 <meta property="og:site_name" content="炎忍のBlog">
+<meta property="og:description" content="简介Material Design 2 (下面简称 MD2 )已经发布了一段时间了，可是还有一些小伙伴不知道怎么迁移到 MD2 来，我也是查了不少资料才摸索出来的         AndroidX首先，需要迁移到 AndroidX 来，这个网上有很多教程了，AS 和 IDEA 也有相关的功能，这里就不赘述了         修改主题然后，需要修改 styles.xml 中的内容了，修改你之前的主题">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-07-31T18:07:52.047Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="炎忍のBlog">
+<meta name="twitter:title" content="如何优雅的使用 Material Design 2">
+<meta name="twitter:description" content="简介Material Design 2 (下面简称 MD2 )已经发布了一段时间了，可是还有一些小伙伴不知道怎么迁移到 MD2 来，我也是查了不少资料才摸索出来的         AndroidX首先，需要迁移到 AndroidX 来，这个网上有很多教程了，AS 和 IDEA 也有相关的功能，这里就不赘述了         修改主题然后，需要修改 styles.xml 中的内容了，修改你之前的主题">
   <link rel="alternate" href="/atom.xml" title="炎忍のBlog" type="application/atom+xml">
-  <link rel="canonical" href="https://blog.endureblaze.cn/">
+  <link rel="canonical" href="https://blog.endureblaze.cn/posts/9cb48aa5/">
 
 
 <script id="page.configurations">
@@ -76,7 +81,7 @@
   };
 </script>
 
-  <title>炎忍のBlog</title>
+  <title>如何优雅的使用 Material Design 2 | 炎忍のBlog</title>
   
 
 
@@ -115,7 +120,7 @@
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
-  <div class="container sidebar-position-left page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -148,7 +153,7 @@
         
         
           
-          <li class="menu-item menu-item-首页 menu-item-active">
+          <li class="menu-item menu-item-首页">
       
     
 
@@ -253,8 +258,9 @@
 
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
-      
+
+  <div id="posts" class="posts-expand">
+    
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
@@ -275,10 +281,8 @@
       <header class="post-header">
 
         
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/posts/9cb48aa5/" class="post-title-link" itemprop="url">如何优雅的使用 Material Design 2</a>
+          <h2 class="post-title" itemprop="name headline">如何优雅的使用 Material Design 2
+
               
             
           </h2>
@@ -330,6 +334,15 @@
             </span>
           
 
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon"
+              >
+                <i class="fa fa-eye"></i>
+                 阅读次数： 
+                <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+              </span>
+            </span>
           <br>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -361,23 +374,30 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          
-            <p>
-              简介Material Design 2 (下面简称 MD2 )已经发布了一段时间了，可是还有一些小伙伴不知道怎么迁移到 MD2 来，我也是查了不少资料才摸索出来的        
-AndroidX首先，需要迁移到 AndroidX 来，这个网上有很多教程了，AS 和 IDEA 也有相关的功能，这里就
-              ...
-            </p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/posts/9cb48aa5/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
+        <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Material Design 2 (下面简称 MD2 )已经发布了一段时间了，可是还有一些小伙伴不知道怎么迁移到 MD2 来，我也是查了不少资料才摸索出来的        </p>
+<h2 id="AndroidX"><a href="#AndroidX" class="headerlink" title="AndroidX"></a>AndroidX</h2><p>首先，需要迁移到 AndroidX 来，这个网上有很多教程了，AS 和 IDEA 也有相关的功能，这里就不赘述了        </p>
+<h2 id="修改主题"><a href="#修改主题" class="headerlink" title="修改主题"></a>修改主题</h2><p>然后，需要修改 styles.xml 中的内容了，修改你之前的主题为</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;style name=<span class="string">"AppTheme"</span> parent=<span class="string">"Theme.MaterialComponents.Light.NoActionBar"</span>&gt;<span class="string">"</span></span><br></pre></td></tr></table></figure>
+
+<p>当然还有其他可选的</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Theme.MaterialComponents</span><br><span class="line">Theme.MaterialComponents.Light</span><br><span class="line">Theme.MaterialComponents.NoActionBar</span><br><span class="line">Theme.MaterialComponents.Light.NoActionBar</span><br><span class="line">Theme.MaterialComponents.Light.DarkActionBar</span><br></pre></td></tr></table></figure>
+
+<p>如果只想对 Material  组件生效那就用</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Theme.MaterialComponents.Bridge</span><br><span class="line">Theme.MaterialComponents.Light.Bridge</span><br><span class="line">Theme.MaterialComponents.NoActionBar.Bridge</span><br><span class="line">Theme.MaterialComponents.Light.NoActionBar.Bridge</span><br><span class="line">Theme.MaterialComponents.Light.DarkActionBar.Bridge</span><br></pre></td></tr></table></figure>
+
+<p>仅仅是这一个操作就完成了大部分任务了，现在编译就可以看到一些新特性了<br>不过肯定没有这么简单，所以这里来讲解一些坑</p>
+<h2 id="开始踩坑"><a href="#开始踩坑" class="headerlink" title="开始踩坑"></a>开始踩坑</h2><h4 id="FloatingActionButton颜色问题"><a href="#FloatingActionButton颜色问题" class="headerlink" title="FloatingActionButton颜色问题"></a>FloatingActionButton颜色问题</h4><p>对，你没看错，MD2 默认的 FAB 颜色有一点问题<br>默认情况下背景色不是主题的强调色，图标的颜色也是黑的，很丑，那么怎么解决呢？<br>很简单，添加</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">app:backgroundTint=<span class="string">"?attr/colorAccent"</span></span><br><span class="line">app:tint=<span class="string">"@android:color/white"</span></span><br></pre></td></tr></table></figure>
+
+<p>这两行到 FAB的属性，即</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;com.google.android.material.floatingactionbutton.FloatingActionButton</span><br><span class="line">		android:layout_width=<span class="string">"wrap_content"</span></span><br><span class="line">		android:layout_height=<span class="string">"wrap_content"</span></span><br><span class="line">		android:id=<span class="string">"@+id/fab_chat_edit"</span></span><br><span class="line">        app:backgroundTint=<span class="string">"?attr/colorAccent"</span></span><br><span class="line">        app:tint=<span class="string">"@android:color/white"</span>/&gt;</span><br></pre></td></tr></table></figure>
+
+<p>这样就完成啦，背景色是主题的强调色，图标是白色，就和以前的一样了，当然也可以修改为其他的颜色</p>
+<h4 id="布局的-Design-界面不能预览"><a href="#布局的-Design-界面不能预览" class="headerlink" title="布局的 Design 界面不能预览"></a>布局的 Design 界面不能预览</h4><p>这个就比较麻烦了，好像只有第一次启动ide的时候能正常看到布局，过一会就无法预览了，提示异常，感觉是个bug，临时的解决办法就是修改主题，xml布局界面上边修改主题为旧版本的即可，这样改以后布局可以看，只是 material 的效果都没了，很难受</p>
+<p>还有一种办法，参考 <a href="https://stackoverflow.com/questions/55791884/cannot-render-materialbutton-with-android-material1-1-x" target="_blank" rel="noopener">stackoverflow</a> 比较简单的办法,添加一个预览的style</p>
+<p>最后还有一种说是 Android Studio 3.5 修复了，不过我是 IDEA 就不太清楚了</p>
+<h2 id="待续"><a href="#待续" class="headerlink" title="待续"></a>待续</h2><p>暂时遇到这些，后面还有的话也记录上来</p>
+
     </div>
 
     
@@ -385,149 +405,27 @@ AndroidX首先，需要迁移到 AndroidX 来，这个网上有很多教程了�
     
 
     <footer class="post-footer">
-        <div class="post-eof"></div>
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://blog.endureblaze.cn/posts/12e7f5da/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="汝南京">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="炎忍のBlog">
-    </span>
-      <header class="post-header">
-
+          
         
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/posts/12e7f5da/" class="post-title-link" itemprop="url">Kirby Assistant 1.x.x更新日志</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-07-30 16:44:24" itemprop="dateCreated datePublished" datetime="2019-07-30T16:44:24+08:00">2019-07-30</time>
-            </span>
+        <div class="post-tags">
+            <a href="/tags/Material-Design-2/" rel="tag"><i class="fa fa-tag"></i> Material Design 2</a>
           
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-08-01 02:07:52" itemprop="dateModified" datetime="2019-08-01T02:07:52+08:00">2019-08-01</time>
-              </span>
-            
+            <a href="/tags/踩坑/" rel="tag"><i class="fa fa-tag"></i> 踩坑</a>
           
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Kirby-Assistant/" itemprop="url" rel="index"><span itemprop="name">Kirby Assistant</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          <br>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">本文字数：</span>
-              
-              <span title="本文字数">2.2k</span>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              
-              <span title="阅读时长">4 分钟</span>
-            </span>
-          
-
         </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-            <p>
-              v1.4.4(47)1.根据 Material Design 2 重新调整的界面2.重新调整的配色3.贡献者名单更新
-v1.4.3(46)1.优化apk体积2.优化图片显示3.bug修复
-v1.4.2(45)1.修改游戏详情界面2.修正动画逻辑3.模拟器下载等等，最近没钱
-v1.4.1(44)1.迁
-              ...
-            </p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/posts/12e7f5da/#more" rel="contents">
-                阅读全文 &raquo;
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+              <a href="/posts/12e7f5da/" rel="next" title="Kirby Assistant 1.x.x更新日志">
+                <i class="fa fa-chevron-left"></i> Kirby Assistant 1.x.x更新日志
               </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
+            
+          </div>
 
-    
-    
-    
+          <span class="post-nav-divider"></span>
 
-    <footer class="post-footer">
-        <div class="post-eof"></div>
+          <div class="post-nav-prev post-nav-item">
+          </div>
+        </div>
     </footer>
   </div>
   
@@ -535,14 +433,19 @@ v1.4.1(44)1.迁
   
   </article>
 
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
           
+    
+    
+  <div class="comments" id="comments">
+    <div id="lv-container" data-id="city" data-uid="MTAyMC80NTY5MS8yMjIwMg=="></div>
+  </div>
+  
+  
+
 
         </div>
           
@@ -557,8 +460,17 @@ v1.4.1(44)1.迁
 
   <aside id="sidebar" class="sidebar">
     <div class="sidebar-inner">
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
 
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -687,6 +599,23 @@ v1.4.1(44)1.迁
 
         </div>
       </div>
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AndroidX"><span class="nav-number">2.</span> <span class="nav-text">AndroidX</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改主题"><span class="nav-number">3.</span> <span class="nav-text">修改主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开始踩坑"><span class="nav-number">4.</span> <span class="nav-text">开始踩坑</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#FloatingActionButton颜色问题"><span class="nav-number">4.0.1.</span> <span class="nav-text">FloatingActionButton颜色问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#布局的-Design-界面不能预览"><span class="nav-number">4.0.2.</span> <span class="nav-text">布局的 Design 界面不能预览</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#待续"><span class="nav-number">5.</span> <span class="nav-text">待续</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
         <div class="back-to-top motion-element">
           <i class="fa fa-arrow-up"></i>
           
@@ -764,6 +693,10 @@ v1.4.1(44)1.迁
 
 
   
+  <script src="/js/scrollspy.js?v=7.2.0"></script>
+<script src="/js/post-details.js?v=7.2.0"></script>
+
+
 
   <script src="/js/next-boot.js?v=7.2.0"></script>
 
@@ -813,6 +746,20 @@ v1.4.1(44)1.迁
 
 
     
+
+<script>
+  window.livereOptions = {
+    refer: 'posts/9cb48aa5/'
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+</script>
 
 
 
