@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.endureblaze.cn/"/>
-  <updated>2019-08-01T12:39:07.769Z</updated>
+  <updated>2019-08-01T15:01:09.696Z</updated>
   <id>https://blog.endureblaze.cn/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>一些 WordPress 主题</title>
+    <link href="https://blog.endureblaze.cn/posts/dc790cfc/"/>
+    <id>https://blog.endureblaze.cn/posts/dc790cfc/</id>
+    <published>2019-08-01T14:53:03.000Z</published>
+    <updated>2019-08-01T15:01:09.696Z</updated>
+    
+    <content type="html"><![CDATA[<p>一些 WordPress 主题，好像都是来自吾爱破解，在这里记录一下</p><h2 id="1-betheme"><a href="#1-betheme" class="headerlink" title="1. betheme"></a>1. betheme</h2><p><a href="https://www.52pojie.cn/thread-590043-1-1.html" target="_blank" rel="noopener">https://www.52pojie.cn/thread-590043-1-1.html</a></p><h2 id="2-Begin知更鸟"><a href="#2-Begin知更鸟" class="headerlink" title="2. Begin知更鸟"></a>2. Begin知更鸟</h2><p><a href="https://www.52pojie.cn/thread-664527-1-1.html" target="_blank" rel="noopener">https://www.52pojie.cn/thread-664527-1-1.html</a></p><h2 id="3-DUX"><a href="#3-DUX" class="headerlink" title="3. DUX"></a>3. DUX</h2><p><a href="https://www.52pojie.cn/forum.php?mod=viewthread&amp;tid=832427" target="_blank" rel="noopener">https://www.52pojie.cn/forum.php?mod=viewthread&amp;tid=832427</a></p><h2 id="4-XIU"><a href="#4-XIU" class="headerlink" title="4. XIU"></a>4. XIU</h2><p><a href="https://www.52pojie.cn/thread-705661-1-1.html" target="_blank" rel="noopener">https://www.52pojie.cn/thread-705661-1-1.html</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;一些 WordPress 主题，好像都是来自吾爱破解，在这里记录一下&lt;/p&gt;
+&lt;h2 id=&quot;1-betheme&quot;&gt;&lt;a href=&quot;#1-betheme&quot; class=&quot;headerlink&quot; title=&quot;1. betheme&quot;&gt;&lt;/a&gt;1. betheme&lt;/h2&gt;&lt;
+      
+    
+    </summary>
+    
+      <category term="资源" scheme="https://blog.endureblaze.cn/categories/%E8%B5%84%E6%BA%90/"/>
+    
+    
+      <category term="WordPress" scheme="https://blog.endureblaze.cn/tags/WordPress/"/>
+    
+  </entry>
   
   <entry>
     <title>Windows 软件推荐</title>
@@ -66,9 +92,9 @@
       <category term="技术记录" scheme="https://blog.endureblaze.cn/categories/%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95/"/>
     
     
-      <category term="网站搭建" scheme="https://blog.endureblaze.cn/tags/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/"/>
-    
       <category term="WordPress" scheme="https://blog.endureblaze.cn/tags/WordPress/"/>
+    
+      <category term="网站搭建" scheme="https://blog.endureblaze.cn/tags/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/"/>
     
       <category term="宝塔面板" scheme="https://blog.endureblaze.cn/tags/%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF/"/>
     
