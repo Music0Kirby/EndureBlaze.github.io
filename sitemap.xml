@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.endureblaze.cn/about/index.html</loc>
+    
+    <lastmod>2019-08-01T17:18:18.476Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.endureblaze.cn/posts/d46d4e39/</loc>
     
     <lastmod>2019-08-01T16:42:14.428Z</lastmod>
@@ -47,13 +54,6 @@
     <loc>https://blog.endureblaze.cn/posts/12e7f5da/</loc>
     
     <lastmod>2019-08-01T07:55:37.626Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.endureblaze.cn/about/index.html</loc>
-    
-    <lastmod>2019-08-01T05:05:05.945Z</lastmod>
     
   </url>
   
