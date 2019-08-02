@@ -63,15 +63,18 @@
   };
 </script>
 
-  <meta name="keywords" content="汝南京,炎忍,炎忍博客，汝南京博客，炎忍的博客，汝南京的博客，EndureBlaze">
+  <meta name="description" content="@EndureBlaze">
+<meta name="keywords" content="汝南京,炎忍,炎忍博客，汝南京博客，炎忍的博客，汝南京的博客，EndureBlaze">
 <meta property="og:type" content="website">
 <meta property="og:title" content="更多标签">
 <meta property="og:url" content="https://blog.endureblaze.cn/tags/index.html">
 <meta property="og:site_name" content="炎忍的博客">
+<meta property="og:description" content="@EndureBlaze">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2019-08-01T04:08:15.291Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="更多标签">
+<meta name="twitter:description" content="@EndureBlaze">
   <link rel="alternate" href="/atom.xml" title="炎忍的博客" type="application/atom+xml">
   <link rel="canonical" href="https://blog.endureblaze.cn/tags/">
 
@@ -411,7 +414,7 @@
       src="/uploads/avatar.png"
       alt="汝南京">
   <p class="site-author-name" itemprop="name">汝南京</p>
-  <div class="site-description motion-element" itemprop="description"></div>
+  <div class="site-description motion-element" itemprop="description">@EndureBlaze</div>
 </div>
   <nav class="site-state motion-element">
       <div class="site-state-item site-state-posts">
@@ -575,7 +578,61 @@
   <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
   <span class="post-meta-divider">|</span>
   <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.2.0</div>
-  
+   <div>
+   <span id="sitetime"></span>
+   <span id="year" style="display:none">2019</span> 
+   <span id="month" style="display:none">7</span>   
+   <span id="day" style="display:none">30</span>   
+   <span id="hour" style="display:none">13</span>   
+   <span id="minute" style="display:none">36</span>   
+   <span id="second" style="display:none">17</span>   
+	<script language=javascript>
+	function siteTime(){        
+		window.setTimeout("siteTime()", 1000);
+		var seconds = 1000;
+		var minutes = seconds * 60;
+		var hours = minutes * 60;
+		var days = hours * 24;
+		var years = days * 365;
+		var today = new Date();
+		var todayYear = today.getFullYear();
+		var todayMonth = today.getMonth()+1;
+		var todayDate = today.getDate();
+		var todayHour = today.getHours();
+		var todayMinute = today.getMinutes();
+		var todaySecond = today.getSeconds();
+		/* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+		year - 作为date对象的年份，为4位年份值
+		month - 0-11之间的整数，做为date对象的月份
+		day - 1-31之间的整数，做为date对象的天数
+		hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+		minutes - 0-59之间的整数，做为date对象的分钟数
+		seconds - 0-59之间的整数，做为date对象的秒数
+		microseconds - 0-999之间的整数，做为date对象的毫秒数 */        
+		var year = document.getElementById("year").innerHTML;
+		var month = document.getElementById("month").innerHTML;
+		var day = document.getElementById("day").innerHTML;
+		var hour = document.getElementById("hour").innerHTML;
+		var minute = document.getElementById("minute").innerHTML;
+		var second = document.getElementById("second").innerHTML;//北京时间2018-2-13 00:00:00
+		var t1 = Date.UTC(year,month,day,hour,minute,second); 
+		var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+		var diff = t2-t1;
+		var diffYears = Math.floor(diff/years);
+		var diffDays = Math.floor((diff/days)-diffYears*365);
+		var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+		var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+		var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+		if(diffYears==0){
+		document.getElementById("sitetime").innerHTML=" 网站已存活 "/*+diffYears+" 年 "*/+diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分 "+diffSeconds+" 秒";
+		} else{
+		document.getElementById("sitetime").innerHTML=" 网站已存活 "+diffYears+" 年 "+diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分 "+diffSeconds+" 秒";
+		}
+	}
+	//siteTime(document.getElementById("year").innerHTML,document.getElementById("year").innerHTML,document.getElementById("year").innerHTML,document.getElementById("year").innerHTML,document.getElementById("year").innerHTML,0);
+	siteTime();
+	</script>
+</div>
 
         
 <div class="busuanzi-count">
@@ -690,7 +747,6 @@
     
 <script src="//cdn.jsdelivr.net/gh/lei2rock/blog/js/comment-locate.js"></script>
 <script src="//cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js"></script>
-
 
 
 
