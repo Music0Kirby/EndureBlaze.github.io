@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.endureblaze.cn/about/photos/photoslist.json</loc>
+    
+    <lastmod>2019-08-03T10:02:37.866Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.endureblaze.cn/about/photos/index.html</loc>
+    
+    <lastmod>2019-08-03T09:24:58.002Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.endureblaze.cn/posts/9cb48aa5/</loc>
     
     <lastmod>2019-08-02T11:50:22.108Z</lastmod>
