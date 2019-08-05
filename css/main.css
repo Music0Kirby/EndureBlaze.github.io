@@ -1470,6 +1470,47 @@ pre .javascript .function {
 .fancybox-close:hover {
   border: none;
 }
+#reward-container {
+  padding: 10px 0;
+  margin: 20px auto;
+  width: 90%;
+  text-align: center;
+}
+#reward-button {
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  display: inline-block;
+  vertical-align: text-top;
+  margin: 0;
+  padding: 0 15px;
+  border-radius: 5px;
+  line-height: 2;
+  color: #fff;
+  background: #f44336;
+  letter-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+}
+#reward-button span:hover {
+  background: #f7877f;
+}
+#qr {
+  padding-top: 20px;
+}
+#qr a {
+  border: 0;
+}
+#qr img {
+  width: 180px;
+  max-width: 100%;
+  display: inline-block;
+  margin: 0.8em 2em 0 2em;
+}
+#qr p {
+  text-align: center;
+}
 .post-copyright {
   margin: 2em 0 0;
   padding: 0.5em 1em;
@@ -1588,7 +1629,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #f17a61;
+  background: #ffe785;
 }
 .feed-link,
 .chat {
@@ -3101,6 +3142,23 @@ ul.breadcrumb li+li:last-child {
   text-decoration: none;
   background: rgba(100,154,182,0.902);
   color: #fff !important;
+  -webkit-box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  -moz-box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+#reward-button {
+  height: 35px;
+  width: 35px;
+  padding: 1.5px 0 0;
+  background: #34495e;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: 0.2s ease-out;
+}
+#reward-button:hover {
+  background: #649ab6;
   -webkit-box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   -moz-box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
