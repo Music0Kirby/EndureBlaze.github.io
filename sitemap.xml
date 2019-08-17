@@ -2,23 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://blog.endureblaze.cn/posts/6b0c894/</loc>
-    
-    <lastmod>2019-08-17T06:11:44.158Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://blog.endureblaze.cn/about/kirbyimage/kirbyimagelist.json</loc>
     
-    <lastmod>2019-08-17T06:11:41.723Z</lastmod>
+    <lastmod>2019-08-17T08:29:07.137Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://blog.endureblaze.cn/about/photos/photoslist.json</loc>
     
-    <lastmod>2019-08-17T06:11:41.701Z</lastmod>
+    <lastmod>2019-08-17T08:29:07.112Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.endureblaze.cn/posts/6b0c894/</loc>
+    
+    <lastmod>2019-08-17T06:11:44.158Z</lastmod>
     
   </url>
   
