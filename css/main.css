@@ -1629,7 +1629,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffff6f;
+  background: #fa08b8;
 }
 .feed-link,
 .chat {
@@ -3056,6 +3056,10 @@ ul.breadcrumb li+li:last-child {
 }
 .posts-expand .post-body img {
   border: 0px;
+}
+blockquote p,
+.post-body .note {
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, 'STKaiti', 'KaiTi', '楷体', 'SimKai', 'DFKai-SB', Lato, "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 @media (max-width: 767px) {
   .category-all-page .category-list-item {
