@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Kirby Assistant 2.x.x更新日志]]></title>
+    <url>%2Fposts%2F417dae5e%2F</url>
+    <content type="text"><![CDATA[v2.0.0 (50)1.全新api重新编写2.大部分 MD2 特性3.修复底栏切换过快崩溃的bug4.新增黑暗模式5.假装无缝切换主题6.优化用户信息修改后刷新操作7.优化菜单显示方式8.防止未登录情况下进入闲聊的问题9.重新优化的对话框10.应用内清除缓存11.重写头像裁剪12.上传逻辑13.全新官网]]></content>
+      <categories>
+        <category>我的 Android 应用</category>
+      </categories>
+      <tags>
+        <tag>Kirby Assistant</tag>
+        <tag>更新日志</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[动态替换 ViewPager 里面的 Fragment]]></title>
     <url>%2Fposts%2F6b0c894%2F</url>
     <content type="text"><![CDATA[最近在重写 Kirby Assistant 过程中又遇到了需要动态替换 ViewPager 的某个 Fragment 的需求，因为之前的是直接在同一个布局里暴力替换的，但是这次因为是用其他方法实现的，当然不能用以前的方法了，摸索了一段时间后终于搞定了，现在把可以用的方法放在下面 1. 准备过程首先需要在布局中添加 ViewPager 1234&lt;androidx.viewpager.widget.ViewPager android:id="@+id/main_fragment_viewpager" android:layout_width="match_parent" android:layout_height="match_parent"/&gt; 然后给 ViewPager 写一个 ViewPagerAdapter 并且继承自 FragmentPagerAdapter 123public class ViewPagerAdapter extends FragmentPagerAdapter &#123;//其他东西&#125; 2. 重写 ViewPagerAdapter具体看代码的注释，有注释的都是需要注意的 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778public class ViewPagerAdapter extends FragmentPagerAdapter &#123; private FragmentManager fm; private List&lt;Fragment&gt; fragments; private List&lt;String&gt; page_title;//这个是对应碎片的标题，可以不需要 public ViewPagerAdapter(FragmentManager fm, List&lt;Fragment&gt; fragments,List&lt;String&gt; page_title) &#123; super(fm); this.fm=fm; this.fragments=fragments; this.page_title=page_title; &#125; //注意这个方法，这个是配置你在哪个碎片上进行替换 @NonNull @Override public Object instantiateItem(@NonNull ViewGroup container, int position) &#123; //这里的判断说明的是在三个和第四个碎片上替换 if (position == 2||position == 3) removeFragment(container,position); return super.instantiateItem(container, position); &#125; //这个方法就是通过 Tag 来判断碎片是不是原来的，如果不是就进行替换 private void removeFragment(ViewGroup container,int index) &#123; String tag = getFragmentTag(container.getId(), index); Fragment fragment = fm.findFragmentByTag(tag); if (fragment == null) return; FragmentTransaction ft = fm.beginTransaction(); ft.remove(fragment); ft.commit(); ft = null; fm.executePendingTransactions(); &#125; @NonNull @Override public Fragment getItem(int position) &#123; return fragments.get(position); &#125; @Override public int getCount() &#123; return fragments.size(); &#125; //注意写成这样才可以进行刷新 @Override public int getItemPosition(@NonNull Object object) &#123; return PagerAdapter.POSITION_NONE; &#125; @Override public CharSequence getPageTitle(int position) &#123; return page_title.get(position); &#125; //禁止销毁view达到复用 @Override public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) &#123;&#125; //获取碎片的tag private String getFragmentTag(int viewId, int index) &#123; try &#123; Class&lt;FragmentPagerAdapter&gt; cls = FragmentPagerAdapter.class; Class&lt;?&gt;[] parameterTypes = &#123; int.class, long.class &#125;; Method method = cls.getDeclaredMethod("makeFragmentName", parameterTypes); method.setAccessible(true); String tag = (String) method.invoke(this, viewId, index); return tag; &#125; catch (Exception e) &#123; e.printStackTrace(); return ""; &#125; &#125;&#125; 3. 注意问题如果出现替换后出现某个碎片的布局空白了，那就设置一个 ViewPager 的缓存属性 1main_fragment_viewpager.setOffscreenPageLimit(4);//4代表缓存4页，根据实际情况调整 4. 结尾如果有代码什么问题可以向我提出]]></content>
