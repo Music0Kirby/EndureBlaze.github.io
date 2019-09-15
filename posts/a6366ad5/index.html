@@ -4,65 +4,62 @@
 
 
 
-<html class="theme-next gemini use-motion" lang="zh-CN">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-<meta name="generator" content="Hexo 3.9.0">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.2.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="/uploads/favicon-32x32-next.png?v=7.2.0">
-  <link rel="icon" type="image/png" sizes="16x16" href="/uploads/favicon-16x16-next.png?v=7.2.0">
-  <link rel="mask-icon" href="/images/logo.svg?v=7.2.0" color="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/uploads/favicon-32x32-next.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/uploads/favicon-16x16-next.png?v=7.4.0">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.4.0" color="#222">
+  <link rel="alternate" href="/atom.xml" title="炎忍的博客" type="application/atom+xml">
   <meta name="google-site-verification" content="true">
   <meta name="msvalidate.01" content="true">
   <meta name="yandex-verification" content="true">
   <meta name="baidu-site-verification" content="true">
 
-<link rel="stylesheet" href="/css/main.css?v=7.2.0">
+<link rel="stylesheet" href="/css/main.css?v=7.4.0">
 
 
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
-    
-  
   <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
-  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
   <link rel="stylesheet" href="/lib/pace/pace-theme-material.min.css?v=1.0.2">
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
 
 
-<script id="hexo.configurations">
+<script id="hexo-configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
     scheme: 'Gemini',
-    version: '7.2.0',
+    version: '7.4.0',
+    exturl: false,
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
     copycode: {"enable":true,"show_result":true,"style":"mac"},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
     fancybox: true,
     mediumzoom: false,
     lazyload: true,
     pangu: false,
     algolia: {
-      applicationID: '',
+      appID: '',
       apiKey: '',
       indexName: '',
       hits: {"per_page":10},
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     },
     localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
-    search: {
-      root: '/',
-      path: 'search.xml'
-    },
-    tabs: true,
+    path: 'search.xml',
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     translation: {
       copy_button: '复制',
       copy_success: '复制成功',
       copy_failure: '复制失败'
-    }
+    },
+    sidebarPadding: 40
   };
 </script>
 
@@ -78,17 +75,20 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="我为什么要搭建博客">
 <meta name="twitter:description" content="即使最后没有人为你鼓掌，也要优雅地谢幕，感谢自己的认真付出。">
-  <link rel="alternate" href="/atom.xml" title="炎忍的博客" type="application/atom+xml">
   <link rel="canonical" href="https://blog.endureblaze.cn/posts/a6366ad5/">
 
 
-<script id="page.configurations">
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
   };
 </script>
 
-    
   <title>我为什么要搭建博客 | 炎忍的博客</title>
   
 
@@ -110,7 +110,6 @@
 
   <noscript>
   <style>
-  .use-motion .motion-element,
   .use-motion .brand,
   .use-motion .menu-item,
   .sidebar-inner,
@@ -119,7 +118,7 @@
   .use-motion .comments,
   .use-motion .post-header,
   .use-motion .post-body,
-  .use-motion .collection-title { opacity: initial; }
+  .use-motion .collection-header { opacity: initial; }
 
   .use-motion .logo,
   .use-motion .site-title,
@@ -136,15 +135,14 @@
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
-
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="container use-motion">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
+      <div class="header-inner"><div class="site-brand-container">
   <div class="site-meta">
 
-    <div class="custom-logo-site-title">
+    <div>
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">炎忍的博客</span>
@@ -165,73 +163,73 @@
 </div>
 
 
-
 <nav class="site-nav">
-    <ul id="menu" class="menu">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
         
-        
-        
-          
-          <li class="menu-item menu-item-博客首页">
+        <li class="menu-item menu-item-博客首页">
       
     
 
     <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>博客首页</a>
 
   </li>
+      
+      
+      
         
-        
-        
-          
-          <li class="menu-item menu-item-文章归档">
+        <li class="menu-item menu-item-文章归档">
       
     
 
     <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>文章归档</a>
 
   </li>
+      
+      
+      
         
-        
-        
-          
-          <li class="menu-item menu-item-分类专栏">
+        <li class="menu-item menu-item-分类专栏">
       
     
 
     <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类专栏</a>
 
   </li>
+      
+      
+      
         
-        
-        
-          
-          <li class="menu-item menu-item-各种标签">
+        <li class="menu-item menu-item-各种标签">
       
     
 
     <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>各种标签</a>
 
   </li>
+      
+      
+      
         
-        
-        
-          
-          <li class="menu-item menu-item-小伙伴们">
+        <li class="menu-item menu-item-小伙伴们">
       
     
 
     <a href="/friends/" rel="section"><i class="menu-item-icon fa fa-fw fa-heart"></i> <br>小伙伴们</a>
 
   </li>
+      
+      
+      
         
-        
-        
+          
+          
           
             
             
-            
-              
-              
     
   
   <li class="menu-item menu-item-about">
@@ -243,52 +241,55 @@
   </li>
 
 
-            
-          
-            
-            
-            
-          
-            
-            
-            
           
         
-        <li class="menu-item menu-item-search">
-          <a href="javascript:;" class="popup-trigger">
           
-            <i class="menu-item-icon fa fa-search fa-fw"></i> <br>站点搜索</a>
-        </li>
+          
+          
+        
+          
+          
+          
+        
       
-    </ul>
-    <div class="site-search">
-      
-  <div class="popup search-popup local-search-popup">
-  <div class="local-search-header clearfix">
-    <span class="search-icon">
-      <i class="fa fa-search"></i>
-    </span>
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-    <div class="local-search-input-wrapper">
-      <input autocomplete="off"
-             placeholder="搜索..." spellcheck="false"
-             type="text" id="local-search-input">
-    </div>
-  </div>
-  <div id="local-search-result"></div>
-</div>
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>站点搜索</a>
+      </li>
+    
+  </ul>
 
-
-    </div>
 </nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
 
-  
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
 </div>
     </header>
 
     
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
 
 
     <main id="main" class="main">
@@ -300,13 +301,11 @@
             
 
   <div id="posts" class="posts-expand">
-    
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+      <article itemscope itemtype="http://schema.org/Article">
   
   
   
-  <div class="post-block">
+  <div class="post-block post">
     <link itemprop="mainEntityOfPage" href="https://blog.endureblaze.cn/posts/a6366ad5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -319,23 +318,17 @@
       <meta itemprop="name" content="炎忍的博客">
     </span>
       <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">我为什么要搭建博客
 
-        
-          <h2 class="post-title" itemprop="name headline">我为什么要搭建博客
-
-              
-            
-          </h2>
-        
+          
+        </h2>
 
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
+              <span class="post-meta-item-text">发表于</span>
 
               
                 
@@ -352,9 +345,7 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">专栏：</span>
-              
+              <span class="post-meta-item-text">专栏：</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/随手记/" itemprop="url" rel="index"><span itemprop="name">随手记</span></a></span>
 
@@ -365,35 +356,33 @@
           
 
           
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon"
-              >
+            <span class="post-meta-item" title="阅读次数">
+              <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
-                 阅读次数： 
-                <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
               </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
           
-            
           <br>
-            <span class="post-meta-item">
+            <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-file-word-o"></i>
               </span>
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span title="本文字数">813</span>
+              <span>813</span>
             </span>
           
-            <span class="post-meta-item">
+            <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
               
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
               
-              <span title="阅读时长">1 分钟</span>
+              <span>1 分钟</span>
             </span>
           
 
@@ -414,14 +403,12 @@
 <p>　　我觉得自建博客＋个人域名是树立个人品牌的一个重要步骤，试想别人通过搜索到你的个人网站并联系你的时候，说明个人品牌已经初步建立了。<br>　　但如果仅仅把它形容为「进入现在行业的敲门砖与踏脚石」，这个说法也是不够算是完整的。社交网站、写作平台都是别人的，你拥有的是写的权利跟一个 Profile 页面，写出来的文档都不属于你，而是平台的，这太讽刺了。你获得多少关注不一定直接跟你的写作内容有关，吸引的读者更多是跟平台有关而不是个人有关。<br>　　每次打开博客会有种莫名有种归属感。城市太闹，微博太糟，幸好还有一个没人知晓的博客，在不愿让人知道的那天，任由自己的情绪倾倒。我想这就是博客存在的意义吧。<br>　　博客是你的，哪怕它再破落，访问量再低，狗不嫌家穷。只要你不放弃，到你八十三岁的时候，他仍然会在那里。从这个角度，它承载了记录的功能，它是你人生经历在时间上的痕迹，你可能说 印象笔记 也可以，但凭心而论「我宁愿相信 Hexo 活得会比前者（印象笔记）更久」，因为一切重平台的产品都会因为各种复杂的原因消失殆尽。即便 Hexo 停止更新，我也仍然可以搭一个环境让它跑起来，文章都在你身边存放着，它只是一个开源程序，让大家有写作的乐趣。<br>　　除了记录，独立博客就是“你”，你选择什么域名，使用什么主题，多大的字号，全文输出还是截断输出，使用哪家 Feed 托管，你也许会在 Feed 尾部用插件加上一朵小菊花，你甚至可以推荐一款你喜欢的同性恋应用给大家而不用担心被删除。<br>　　这就是我想要表达的，「这一切都是因为你，同时也呈现你」，它是一个专属于你自己的写作、记录、呈现的地方。它叫博客，但又不只是博客，以前在其他平台写博客是为了很多东西，现在自己搭建写博客只是为了一种生活习惯，少论道，多说常识跟生活。<br>　　这大概就是我对于个人搭建博客的看法了，也是为什么我要去搭建博客。</p>
 
     </div>
-        
-      
 
     
     
     
-    
-      <div>
+        
+      
         <div id="reward-container">
   <div><p style="color:#34495e; margin:0 0 5px 0;">🍭支持一根棒棒糖！</p></div>
   <button id="reward-button" disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
@@ -444,10 +431,10 @@
   </div>
 </div>
 
-      </div>
-      <div>
+      
         
 
+<div>
 <ul class="post-copyright">
   <li class="post-copyright-author">
     <strong>本文作者： </strong>汝南京</li>
@@ -458,36 +445,47 @@
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
 </ul>
+</div>
 
-      </div>
+      
 
-    <footer class="post-footer">
+      <footer class="post-footer">
           
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/为什么/" rel="tag"># 为什么</a>
+            
+              <a href="/tags/看法/" rel="tag"># 看法</a>
+            
+          </div>
         
-        <div class="post-tags">
-            <a href="/tags/为什么/" rel="tag"><i class="fa fa-tag"></i> 为什么</a>
-          
-            <a href="/tags/看法/" rel="tag"><i class="fa fa-tag"></i> 看法</a>
-          
-        </div>
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-              <a href="/posts/d46d4e39/" rel="next" title="偶然间在B站看到的鬼畜">
-                <i class="fa fa-chevron-left"></i> 偶然间在B站看到的鬼畜
-              </a>
-            
-          </div>
 
-          <span class="post-nav-divider"></span>
+        
 
-          <div class="post-nav-prev post-nav-item">
-              <a href="/posts/b36c6159/" rel="prev" title="记一些 Hexo 报错">
-                记一些 Hexo 报错 <i class="fa fa-chevron-right"></i>
-              </a>
-            
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/posts/d46d4e39/" rel="next" title="偶然间在B站看到的鬼畜">
+                  <i class="fa fa-chevron-left"></i> 偶然间在B站看到的鬼畜
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+                <a href="/posts/b36c6159/" rel="prev" title="记一些 Hexo 报错">
+                  记一些 Hexo 报错 <i class="fa fa-chevron-right"></i>
+                </a>
+              
+            </div>
           </div>
-        </div>
-    </footer>
+        
+      </footer>
+    
   </div>
   
   
@@ -507,7 +505,6 @@
   
   
 
-
         </div>
           
   
@@ -519,18 +516,35 @@
     </div>
   </div>
 
-  <aside id="sidebar" class="sidebar">
+  <aside class="sidebar">
     <div class="sidebar-inner">
+        
+        
+        
+        
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
-        <div class="site-overview">
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
 
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image"
       src="/uploads/avatar.png"
       alt="汝南京">
   <p class="site-author-name" itemprop="name">汝南京</p>
-  <div class="site-description motion-element" itemprop="description">@EndureBlaze</div>
+  <div class="site-description" itemprop="description">@EndureBlaze</div>
 </div>
   <nav class="site-state motion-element">
       <div class="site-state-item site-state-posts">
@@ -550,20 +564,6 @@
             <a href="/categories/">
           
         
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
         <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">专栏</span>
         </a>
@@ -577,43 +577,7 @@
             <a href="/tags/">
           
         
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-count">17</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
@@ -665,9 +629,6 @@
 
 
 
-            
-          
-        </div>
       </div>
 
     </div>
@@ -702,8 +663,7 @@
 </div>
   <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
   <span class="post-meta-divider">|</span>
-  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.2.0</div>
-   <div>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.4.0</div> <div>
    <span id="sitetime"></span>
    <span id="year" style="display:none">2019</span> 
    <span id="month" style="display:none">7</span>   
@@ -787,58 +747,32 @@
 
 
 
+
+
+
+
         
       </div>
     </footer>
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-          <span id="scrollpercent"><span>0</span>%</span>
-        
-      </div>
-
-    
-
   </div>
 
   
-    
+
+
     
   
   <script color='0,0,255' opacity='0.5' zIndex='-1' count='150' src="/lib/canvas-nest/canvas-nest.min.js"></script>
   <script size="300" alpha="0.6" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  <script src="/lib/anime.min.js?v=3.1.0"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
   <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
   <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="/js/utils.js?v=7.4.0"></script><script src="/js/motion.js?v=7.4.0"></script>
+<script src="/js/schemes/pisces.js?v=7.4.0"></script>
 
-  <script src="/js/utils.js?v=7.2.0"></script>
-  <script src="/js/motion.js?v=7.2.0"></script>
-
-  
-  <script src="/js/affix.js?v=7.2.0"></script>
-  <script src="/js/schemes/pisces.js?v=7.2.0"></script>
-
-
-
-  
-  <script src="/js/scrollspy.js?v=7.2.0"></script>
-<script src="/js/post-details.js?v=7.2.0"></script>
-
-
-
-  <script src="/js/next-boot.js?v=7.2.0"></script>
-
-  
-
-  
-
-  
-
-
-  
-
-
+<script src="/js/next-boot.js?v=7.4.0"></script>
 
 
 
@@ -851,18 +785,8 @@
 
 
 
+  <script src="/js/local-search.js?v=7.4.0"></script>
 
-
-
-
-
-
-
-
-
-
-
-  <script src="/js/local-search.js?v=7.2.0"></script>
 
 
 
@@ -876,11 +800,17 @@
 
 
 
-    
+  
+
+  
+
+  
+
+  
 
 <script>
   window.livereOptions = {
-    refer: 'posts/a6366ad5/'
+    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
   };
   (function(d, s) {
     var j, e = d.getElementsByTagName(s)[0];
@@ -892,7 +822,6 @@
   })(document, 'script');
 </script>
 
-    
 
 
 
@@ -913,12 +842,6 @@
     s.parentNode.insertBefore(bp, s);
 })();
 </script>
-
-
-
-
-  <script type="text/javascript" src="/js/src/love.js"></script>
-
 
 </body>
 </html>

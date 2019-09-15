@@ -4,65 +4,62 @@
 
 
 
-<html class="theme-next gemini use-motion" lang="zh-CN">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-<meta name="generator" content="Hexo 3.9.0">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.2.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="/uploads/favicon-32x32-next.png?v=7.2.0">
-  <link rel="icon" type="image/png" sizes="16x16" href="/uploads/favicon-16x16-next.png?v=7.2.0">
-  <link rel="mask-icon" href="/images/logo.svg?v=7.2.0" color="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/uploads/favicon-32x32-next.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/uploads/favicon-16x16-next.png?v=7.4.0">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.4.0" color="#222">
+  <link rel="alternate" href="/atom.xml" title="炎忍的博客" type="application/atom+xml">
   <meta name="google-site-verification" content="true">
   <meta name="msvalidate.01" content="true">
   <meta name="yandex-verification" content="true">
   <meta name="baidu-site-verification" content="true">
 
-<link rel="stylesheet" href="/css/main.css?v=7.2.0">
+<link rel="stylesheet" href="/css/main.css?v=7.4.0">
 
 
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
-    
-  
   <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
-  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
   <link rel="stylesheet" href="/lib/pace/pace-theme-material.min.css?v=1.0.2">
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
 
 
-<script id="hexo.configurations">
+<script id="hexo-configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
     scheme: 'Gemini',
-    version: '7.2.0',
+    version: '7.4.0',
+    exturl: false,
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
     copycode: {"enable":true,"show_result":true,"style":"mac"},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
     fancybox: true,
     mediumzoom: false,
     lazyload: true,
     pangu: false,
     algolia: {
-      applicationID: '',
+      appID: '',
       apiKey: '',
       indexName: '',
       hits: {"per_page":10},
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     },
     localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
-    search: {
-      root: '/',
-      path: 'search.xml'
-    },
-    tabs: true,
+    path: 'search.xml',
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     translation: {
       copy_button: '复制',
       copy_success: '复制成功',
       copy_failure: '复制失败'
-    }
+    },
+    sidebarPadding: 40
   };
 </script>
 
@@ -78,17 +75,20 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Kirby Assistant 编年史">
 <meta name="twitter:description" content="写在前面：由于很多东西已经无法考证其实就是懒，当初没记下来，所以早期的版本可能会有记不清版本号的情况，不过大概还是能对的上时间的。">
-  <link rel="alternate" href="/atom.xml" title="炎忍的博客" type="application/atom+xml">
   <link rel="canonical" href="https://blog.endureblaze.cn/posts/a505f9a9/">
 
 
-<script id="page.configurations">
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
   };
 </script>
 
-    
   <title>Kirby Assistant 编年史 | 炎忍的博客</title>
   
 
@@ -110,7 +110,6 @@
 
   <noscript>
   <style>
-  .use-motion .motion-element,
   .use-motion .brand,
   .use-motion .menu-item,
   .sidebar-inner,
@@ -119,7 +118,7 @@
   .use-motion .comments,
   .use-motion .post-header,
   .use-motion .post-body,
-  .use-motion .collection-title { opacity: initial; }
+  .use-motion .collection-header { opacity: initial; }
 
   .use-motion .logo,
   .use-motion .site-title,
@@ -136,15 +135,14 @@
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
-
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="container use-motion">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
+      <div class="header-inner"><div class="site-brand-container">
   <div class="site-meta">
 
-    <div class="custom-logo-site-title">
+    <div>
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">炎忍的博客</span>
@@ -165,73 +163,73 @@
 </div>
 
 
-
 <nav class="site-nav">
-    <ul id="menu" class="menu">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
         
-        
-        
-          
-          <li class="menu-item menu-item-博客首页">
+        <li class="menu-item menu-item-博客首页">
       
     
 
     <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>博客首页</a>
 
   </li>
+      
+      
+      
         
-        
-        
-          
-          <li class="menu-item menu-item-文章归档">
+        <li class="menu-item menu-item-文章归档">
       
     
 
     <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>文章归档</a>
 
   </li>
+      
+      
+      
         
-        
-        
-          
-          <li class="menu-item menu-item-分类专栏">
+        <li class="menu-item menu-item-分类专栏">
       
     
 
     <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类专栏</a>
 
   </li>
+      
+      
+      
         
-        
-        
-          
-          <li class="menu-item menu-item-各种标签">
+        <li class="menu-item menu-item-各种标签">
       
     
 
     <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>各种标签</a>
 
   </li>
+      
+      
+      
         
-        
-        
-          
-          <li class="menu-item menu-item-小伙伴们">
+        <li class="menu-item menu-item-小伙伴们">
       
     
 
     <a href="/friends/" rel="section"><i class="menu-item-icon fa fa-fw fa-heart"></i> <br>小伙伴们</a>
 
   </li>
+      
+      
+      
         
-        
-        
+          
+          
           
             
             
-            
-              
-              
     
   
   <li class="menu-item menu-item-about">
@@ -243,52 +241,55 @@
   </li>
 
 
-            
-          
-            
-            
-            
-          
-            
-            
-            
           
         
-        <li class="menu-item menu-item-search">
-          <a href="javascript:;" class="popup-trigger">
           
-            <i class="menu-item-icon fa fa-search fa-fw"></i> <br>站点搜索</a>
-        </li>
+          
+          
+        
+          
+          
+          
+        
       
-    </ul>
-    <div class="site-search">
-      
-  <div class="popup search-popup local-search-popup">
-  <div class="local-search-header clearfix">
-    <span class="search-icon">
-      <i class="fa fa-search"></i>
-    </span>
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-    <div class="local-search-input-wrapper">
-      <input autocomplete="off"
-             placeholder="搜索..." spellcheck="false"
-             type="text" id="local-search-input">
-    </div>
-  </div>
-  <div id="local-search-result"></div>
-</div>
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>站点搜索</a>
+      </li>
+    
+  </ul>
 
-
-    </div>
 </nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
 
-  
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
 </div>
     </header>
 
     
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
 
 
     <main id="main" class="main">
@@ -300,13 +301,11 @@
             
 
   <div id="posts" class="posts-expand">
-    
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+      <article itemscope itemtype="http://schema.org/Article">
   
   
   
-  <div class="post-block">
+  <div class="post-block post">
     <link itemprop="mainEntityOfPage" href="https://blog.endureblaze.cn/posts/a505f9a9/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -319,23 +318,17 @@
       <meta itemprop="name" content="炎忍的博客">
     </span>
       <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">Kirby Assistant 编年史
 
-        
-          <h2 class="post-title" itemprop="name headline">Kirby Assistant 编年史
-
-              
-            
-          </h2>
-        
+          
+        </h2>
 
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
+              <span class="post-meta-item-text">发表于</span>
 
               
                 
@@ -351,9 +344,7 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2019-08-29 13:49:48" itemprop="dateModified" datetime="2019-08-29T13:49:48+08:00">2019-08-29</time>
               </span>
             
@@ -362,9 +353,7 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">专栏：</span>
-              
+              <span class="post-meta-item-text">专栏：</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/我的-Android-应用/" itemprop="url" rel="index"><span itemprop="name">我的 Android 应用</span></a></span>
 
@@ -375,35 +364,33 @@
           
 
           
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon"
-              >
+            <span class="post-meta-item" title="阅读次数">
+              <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
-                 阅读次数： 
-                <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
               </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
           
-            
           <br>
-            <span class="post-meta-item">
+            <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-file-word-o"></i>
               </span>
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span title="本文字数">5.3k</span>
+              <span>5.3k</span>
             </span>
           
-            <span class="post-meta-item">
+            <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
               
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
               
-              <span title="阅读时长">9 分钟</span>
+              <span>9 分钟</span>
             </span>
           
 
@@ -492,14 +479,12 @@
 </ul>
 
     </div>
-        
-      
 
     
     
     
-    
-      <div>
+        
+      
         <div id="reward-container">
   <div><p style="color:#34495e; margin:0 0 5px 0;">🍭支持一根棒棒糖！</p></div>
   <button id="reward-button" disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
@@ -522,10 +507,10 @@
   </div>
 </div>
 
-      </div>
-      <div>
+      
         
 
+<div>
 <ul class="post-copyright">
   <li class="post-copyright-author">
     <strong>本文作者： </strong>汝南京</li>
@@ -536,28 +521,36 @@
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
 </ul>
+</div>
 
-      </div>
+      
 
-    <footer class="post-footer">
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-              <a href="/posts/b36c6159/" rel="next" title="记一些 Hexo 报错">
-                <i class="fa fa-chevron-left"></i> 记一些 Hexo 报错
-              </a>
-            
+      <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/posts/b36c6159/" rel="next" title="记一些 Hexo 报错">
+                  <i class="fa fa-chevron-left"></i> 记一些 Hexo 报错
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+                <a href="/posts/919199f6/" rel="prev" title="实现滑动隐藏 ToolBar 与 BottomNavigation">
+                  实现滑动隐藏 ToolBar 与 BottomNavigation <i class="fa fa-chevron-right"></i>
+                </a>
+              
+            </div>
           </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-              <a href="/posts/919199f6/" rel="prev" title="实现滑动隐藏 ToolBar 与 BottomNavigation">
-                实现滑动隐藏 ToolBar 与 BottomNavigation <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-    </footer>
+        
+      </footer>
+    
   </div>
   
   
@@ -577,7 +570,6 @@
   
   
 
-
         </div>
           
   
@@ -589,27 +581,37 @@
     </div>
   </div>
 
-  <aside id="sidebar" class="sidebar">
+  <aside class="sidebar">
     <div class="sidebar-inner">
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
+        
+        
+        
+        
       
 
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-overview">
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
 
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-开局一段话，内容全靠编"><span class="nav-text">1. 开局一段话，内容全靠编</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-源自想法"><span class="nav-text">2.源自想法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-未发布的初代-绝唱-iapp"><span class="nav-text">3. 未发布的初代 绝唱 iapp</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-从零开坑"><span class="nav-text">3.1 从零开坑</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-无力吐槽的图标"><span class="nav-text">3.2 无力吐槽的图标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-这就算……开始了吧"><span class="nav-text">3.2 这就算……开始了吧</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-虽然不好用-但-你好-AndroLua-你好-Kirby-Download"><span class="nav-text">4. 虽然不好用 但 你好 AndroLua 你好 Kirby Download</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-初识-AndroLua"><span class="nav-text">4.1 初识 AndroLua</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-崭新的-Kirby-Download"><span class="nav-text">4.2 崭新的 Kirby Download</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-完整的资源"><span class="nav-text">4.3 完整的资源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4-跨越-版本-1-0"><span class="nav-text">4.4 跨越 版本 1.0</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4-震惊-KD-惨遭被盗"><span class="nav-text">4.4 震惊 KD 惨遭被盗</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-5-虚假的官网"><span class="nav-text">4.5 虚假的官网</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-6-停止支持"><span class="nav-text">4.6 停止支持</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-你好-java"><span class="nav-text">5. 你好 java</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-为什么"><span class="nav-text">5.1 为什么</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-停更-但不是永远"><span class="nav-text">5.2 停更 但不是永远</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-3-手滑的重要性（雾"><span class="nav-text">5.3 手滑的重要性（雾</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-4-来了来了-他来了"><span class="nav-text">5.4 来了来了 他来了</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-5-V2？集合体？slogan？2018？"><span class="nav-text">5.5 V2？集合体？slogan？2018？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-1-永不弃坑-就是我除非我亏的没钱了"><span class="nav-text">5.2.1 永不弃坑 就是我除非我亏的没钱了</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-2-不仅有游戏"><span class="nav-text">5.2.2 不仅有游戏</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-6-什么什么？用户系统？闲聊？模拟器直接下？"><span class="nav-text">5.6 什么什么？用户系统？闲聊？模拟器直接下？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-7-3-0预告"><span class="nav-text">5.7 3.0预告</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-7-1-真实手绘"><span class="nav-text">5.7.1 真实手绘</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-7-2-除夕夜发布"><span class="nav-text">5.7.2 除夕夜发布</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-再见-Kirby-Download"><span class="nav-text">6. 再见 Kirby Download</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#6-1-事件"><span class="nav-text">6.1 事件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-2-反思"><span class="nav-text">6.2 反思</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-崭新的-你好-Kirby-Assistant"><span class="nav-text">7. 崭新的 你好 Kirby Assistant</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#7-1-从头来过"><span class="nav-text">7.1 从头来过</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-2-新的特性"><span class="nav-text">7.2 新的特性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-2-撇弃旧框架"><span class="nav-text">7.2 撇弃旧框架</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-3-新的图标"><span class="nav-text">7.3 新的图标</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-未来·炫动"><span class="nav-text">8. 未来·炫动</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#8-1-全新的-KA"><span class="nav-text">8.1 全新的 KA</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-2-更新"><span class="nav-text">8.2 更新</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-3-全新架构-PBL"><span class="nav-text">8.3 全新架构 PBL</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-3-无延迟启动"><span class="nav-text">8.3 无延迟启动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-4-全新网站"><span class="nav-text">8.4 全新网站</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-5-更全新的图标"><span class="nav-text">8.5 更全新的图标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-6-AndroidX-MD2-以及-更小的体积"><span class="nav-text">8.6 AndroidX MD2 以及 更小的体积</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-炫动了-未来呢？"><span class="nav-text">9. 炫动了 未来呢？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-未完待续"><span class="nav-text">10. 未完待续</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#10-1-我还想说"><span class="nav-text">10.1 我还想说</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#感谢名单"><span class="nav-text">感谢名单</span></a></li></ol></div>
+        
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image"
       src="/uploads/avatar.png"
       alt="汝南京">
   <p class="site-author-name" itemprop="name">汝南京</p>
-  <div class="site-description motion-element" itemprop="description">@EndureBlaze</div>
+  <div class="site-description" itemprop="description">@EndureBlaze</div>
 </div>
   <nav class="site-state motion-element">
       <div class="site-state-item site-state-posts">
@@ -629,20 +631,6 @@
             <a href="/categories/">
           
         
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
         <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">专栏</span>
         </a>
@@ -656,43 +644,7 @@
             <a href="/tags/">
           
         
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-count">17</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
@@ -744,27 +696,7 @@
 
 
 
-            
-          
-        </div>
       </div>
-      <!--noindex-->
-        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-            
-            
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-开局一段话，内容全靠编"><span class="nav-text">1. 开局一段话，内容全靠编</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-源自想法"><span class="nav-text">2.源自想法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-未发布的初代-绝唱-iapp"><span class="nav-text">3. 未发布的初代 绝唱 iapp</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-从零开坑"><span class="nav-text">3.1 从零开坑</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-无力吐槽的图标"><span class="nav-text">3.2 无力吐槽的图标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-这就算……开始了吧"><span class="nav-text">3.2 这就算……开始了吧</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-虽然不好用-但-你好-AndroLua-你好-Kirby-Download"><span class="nav-text">4. 虽然不好用 但 你好 AndroLua 你好 Kirby Download</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-初识-AndroLua"><span class="nav-text">4.1 初识 AndroLua</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-崭新的-Kirby-Download"><span class="nav-text">4.2 崭新的 Kirby Download</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-完整的资源"><span class="nav-text">4.3 完整的资源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4-跨越-版本-1-0"><span class="nav-text">4.4 跨越 版本 1.0</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4-震惊-KD-惨遭被盗"><span class="nav-text">4.4 震惊 KD 惨遭被盗</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-5-虚假的官网"><span class="nav-text">4.5 虚假的官网</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-6-停止支持"><span class="nav-text">4.6 停止支持</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-你好-java"><span class="nav-text">5. 你好 java</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-为什么"><span class="nav-text">5.1 为什么</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-停更-但不是永远"><span class="nav-text">5.2 停更 但不是永远</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-3-手滑的重要性（雾"><span class="nav-text">5.3 手滑的重要性（雾</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-4-来了来了-他来了"><span class="nav-text">5.4 来了来了 他来了</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-5-V2？集合体？slogan？2018？"><span class="nav-text">5.5 V2？集合体？slogan？2018？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-1-永不弃坑-就是我除非我亏的没钱了"><span class="nav-text">5.2.1 永不弃坑 就是我除非我亏的没钱了</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-2-不仅有游戏"><span class="nav-text">5.2.2 不仅有游戏</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-6-什么什么？用户系统？闲聊？模拟器直接下？"><span class="nav-text">5.6 什么什么？用户系统？闲聊？模拟器直接下？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-7-3-0预告"><span class="nav-text">5.7 3.0预告</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-7-1-真实手绘"><span class="nav-text">5.7.1 真实手绘</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-7-2-除夕夜发布"><span class="nav-text">5.7.2 除夕夜发布</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-再见-Kirby-Download"><span class="nav-text">6. 再见 Kirby Download</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#6-1-事件"><span class="nav-text">6.1 事件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-2-反思"><span class="nav-text">6.2 反思</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-崭新的-你好-Kirby-Assistant"><span class="nav-text">7. 崭新的 你好 Kirby Assistant</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#7-1-从头来过"><span class="nav-text">7.1 从头来过</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-2-新的特性"><span class="nav-text">7.2 新的特性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-2-撇弃旧框架"><span class="nav-text">7.2 撇弃旧框架</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-3-新的图标"><span class="nav-text">7.3 新的图标</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-未来·炫动"><span class="nav-text">8. 未来·炫动</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#8-1-全新的-KA"><span class="nav-text">8.1 全新的 KA</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-2-更新"><span class="nav-text">8.2 更新</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-3-全新架构-PBL"><span class="nav-text">8.3 全新架构 PBL</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-3-无延迟启动"><span class="nav-text">8.3 无延迟启动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-4-全新网站"><span class="nav-text">8.4 全新网站</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-5-更全新的图标"><span class="nav-text">8.5 更全新的图标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-6-AndroidX-MD2-以及-更小的体积"><span class="nav-text">8.6 AndroidX MD2 以及 更小的体积</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-炫动了-未来呢？"><span class="nav-text">9. 炫动了 未来呢？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-未完待续"><span class="nav-text">10. 未完待续</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#10-1-我还想说"><span class="nav-text">10.1 我还想说</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#感谢名单"><span class="nav-text">感谢名单</span></a></li></ol></div>
-            
-
-          </div>
-        </div>
-      <!--/noindex-->
-      
 
     </div>
   </aside>
@@ -798,8 +730,7 @@
 </div>
   <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
   <span class="post-meta-divider">|</span>
-  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.2.0</div>
-   <div>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.4.0</div> <div>
    <span id="sitetime"></span>
    <span id="year" style="display:none">2019</span> 
    <span id="month" style="display:none">7</span>   
@@ -883,58 +814,32 @@
 
 
 
+
+
+
+
         
       </div>
     </footer>
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-          <span id="scrollpercent"><span>0</span>%</span>
-        
-      </div>
-
-    
-
   </div>
 
   
-    
+
+
     
   
   <script color='0,0,255' opacity='0.5' zIndex='-1' count='150' src="/lib/canvas-nest/canvas-nest.min.js"></script>
   <script size="300" alpha="0.6" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  <script src="/lib/anime.min.js?v=3.1.0"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
   <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
   <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="/js/utils.js?v=7.4.0"></script><script src="/js/motion.js?v=7.4.0"></script>
+<script src="/js/schemes/pisces.js?v=7.4.0"></script>
 
-  <script src="/js/utils.js?v=7.2.0"></script>
-  <script src="/js/motion.js?v=7.2.0"></script>
-
-  
-  <script src="/js/affix.js?v=7.2.0"></script>
-  <script src="/js/schemes/pisces.js?v=7.2.0"></script>
-
-
-
-  
-  <script src="/js/scrollspy.js?v=7.2.0"></script>
-<script src="/js/post-details.js?v=7.2.0"></script>
-
-
-
-  <script src="/js/next-boot.js?v=7.2.0"></script>
-
-  
-
-  
-
-  
-
-
-  
-
-
+<script src="/js/next-boot.js?v=7.4.0"></script>
 
 
 
@@ -947,18 +852,8 @@
 
 
 
+  <script src="/js/local-search.js?v=7.4.0"></script>
 
-
-
-
-
-
-
-
-
-
-
-  <script src="/js/local-search.js?v=7.2.0"></script>
 
 
 
@@ -972,11 +867,17 @@
 
 
 
-    
+  
+
+  
+
+  
+
+  
 
 <script>
   window.livereOptions = {
-    refer: 'posts/a505f9a9/'
+    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
   };
   (function(d, s) {
     var j, e = d.getElementsByTagName(s)[0];
@@ -988,7 +889,6 @@
   })(document, 'script');
 </script>
 
-    
 
 
 
@@ -1009,12 +909,6 @@
     s.parentNode.insertBefore(bp, s);
 })();
 </script>
-
-
-
-
-  <script type="text/javascript" src="/js/src/love.js"></script>
-
 
 </body>
 </html>

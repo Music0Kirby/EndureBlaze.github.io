@@ -4,65 +4,62 @@
 
 
 
-<html class="theme-next gemini use-motion" lang="zh-CN">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-<meta name="generator" content="Hexo 3.9.0">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.2.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="/uploads/favicon-32x32-next.png?v=7.2.0">
-  <link rel="icon" type="image/png" sizes="16x16" href="/uploads/favicon-16x16-next.png?v=7.2.0">
-  <link rel="mask-icon" href="/images/logo.svg?v=7.2.0" color="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/uploads/favicon-32x32-next.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/uploads/favicon-16x16-next.png?v=7.4.0">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.4.0" color="#222">
+  <link rel="alternate" href="/atom.xml" title="炎忍的博客" type="application/atom+xml">
   <meta name="google-site-verification" content="true">
   <meta name="msvalidate.01" content="true">
   <meta name="yandex-verification" content="true">
   <meta name="baidu-site-verification" content="true">
 
-<link rel="stylesheet" href="/css/main.css?v=7.2.0">
+<link rel="stylesheet" href="/css/main.css?v=7.4.0">
 
 
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
-    
-  
   <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
-  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
   <link rel="stylesheet" href="/lib/pace/pace-theme-material.min.css?v=1.0.2">
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
 
 
-<script id="hexo.configurations">
+<script id="hexo-configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
     scheme: 'Gemini',
-    version: '7.2.0',
+    version: '7.4.0',
+    exturl: false,
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
     copycode: {"enable":true,"show_result":true,"style":"mac"},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
     fancybox: true,
     mediumzoom: false,
     lazyload: true,
     pangu: false,
     algolia: {
-      applicationID: '',
+      appID: '',
       apiKey: '',
       indexName: '',
       hits: {"per_page":10},
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     },
     localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
-    search: {
-      root: '/',
-      path: 'search.xml'
-    },
-    tabs: true,
+    path: 'search.xml',
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     translation: {
       copy_button: '复制',
       copy_success: '复制成功',
       copy_failure: '复制失败'
-    }
+    },
+    sidebarPadding: 40
   };
 </script>
 
@@ -77,17 +74,20 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="炎忍的博客">
 <meta name="twitter:description" content="@EndureBlaze">
-  <link rel="alternate" href="/atom.xml" title="炎忍的博客" type="application/atom+xml">
   <link rel="canonical" href="https://blog.endureblaze.cn/tags/视频/">
 
 
-<script id="page.configurations">
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
+    isHome: false,
+    isPost: false,
+    isPage: false,
+    isArchive: false
   };
 </script>
 
-    
   <title>标签: 视频 | 炎忍的博客</title>
   
 
@@ -109,7 +109,6 @@
 
   <noscript>
   <style>
-  .use-motion .motion-element,
   .use-motion .brand,
   .use-motion .menu-item,
   .sidebar-inner,
@@ -118,7 +117,7 @@
   .use-motion .comments,
   .use-motion .post-header,
   .use-motion .post-body,
-  .use-motion .collection-title { opacity: initial; }
+  .use-motion .collection-header { opacity: initial; }
 
   .use-motion .logo,
   .use-motion .site-title,
@@ -135,15 +134,14 @@
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
-
-  <div class="container sidebar-position-left ">
+  <div class="container use-motion">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
+      <div class="header-inner"><div class="site-brand-container">
   <div class="site-meta">
 
-    <div class="custom-logo-site-title">
+    <div>
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">炎忍的博客</span>
@@ -164,73 +162,73 @@
 </div>
 
 
-
 <nav class="site-nav">
-    <ul id="menu" class="menu">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
         
-        
-        
-          
-          <li class="menu-item menu-item-博客首页">
+        <li class="menu-item menu-item-博客首页">
       
     
 
     <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>博客首页</a>
 
   </li>
+      
+      
+      
         
-        
-        
-          
-          <li class="menu-item menu-item-文章归档">
+        <li class="menu-item menu-item-文章归档">
       
     
 
     <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>文章归档</a>
 
   </li>
+      
+      
+      
         
-        
-        
-          
-          <li class="menu-item menu-item-分类专栏">
+        <li class="menu-item menu-item-分类专栏">
       
     
 
     <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类专栏</a>
 
   </li>
+      
+      
+      
         
-        
-        
-          
-          <li class="menu-item menu-item-各种标签 menu-item-active">
+        <li class="menu-item menu-item-各种标签">
       
     
 
     <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>各种标签</a>
 
   </li>
+      
+      
+      
         
-        
-        
-          
-          <li class="menu-item menu-item-小伙伴们">
+        <li class="menu-item menu-item-小伙伴们">
       
     
 
     <a href="/friends/" rel="section"><i class="menu-item-icon fa fa-fw fa-heart"></i> <br>小伙伴们</a>
 
   </li>
+      
+      
+      
         
-        
-        
+          
+          
           
             
             
-            
-              
-              
     
   
   <li class="menu-item menu-item-about">
@@ -242,52 +240,55 @@
   </li>
 
 
-            
-          
-            
-            
-            
-          
-            
-            
-            
           
         
-        <li class="menu-item menu-item-search">
-          <a href="javascript:;" class="popup-trigger">
           
-            <i class="menu-item-icon fa fa-search fa-fw"></i> <br>站点搜索</a>
-        </li>
+          
+          
+        
+          
+          
+          
+        
       
-    </ul>
-    <div class="site-search">
-      
-  <div class="popup search-popup local-search-popup">
-  <div class="local-search-header clearfix">
-    <span class="search-icon">
-      <i class="fa fa-search"></i>
-    </span>
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-    <div class="local-search-input-wrapper">
-      <input autocomplete="off"
-             placeholder="搜索..." spellcheck="false"
-             type="text" id="local-search-input">
-    </div>
-  </div>
-  <div id="local-search-result"></div>
-</div>
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>站点搜索</a>
+      </li>
+    
+  </ul>
 
-
-    </div>
 </nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
 
-  
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
 </div>
     </header>
 
     
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
 
 
     <main id="main" class="main">
@@ -333,22 +334,31 @@
   
   
   <div class="post-block tag">
-
     <div id="posts" class="posts-collapse">
       <div class="collection-title">
-        <h2>视频<small>标签</small>
+        <h2 class="collection-header">视频<small>标签</small>
         </h2>
       </div>
-        
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+      
+
+  
+  
+
+  
+    
+    <div class="collection-year">
+      <h2 class="collection-header">2019</h2>
+    </div>
+  
+
+  <article itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
 
       <h3 class="post-title">
+        
           <a class="post-title-link" href="/posts/d46d4e39/" itemprop="url">
-            
-              <span itemprop="name">偶然间在B站看到的鬼畜</span>
-            
+            <span itemprop="name">偶然间在B站看到的鬼畜</span>
           </a>
         
       </h3>
@@ -365,9 +375,8 @@
   </article>
 
 
-      
-    </div>
 
+    </div>
   </div>
   
   
@@ -391,18 +400,30 @@
     </div>
   </div>
 
-  <aside id="sidebar" class="sidebar">
+  <aside class="sidebar">
     <div class="sidebar-inner">
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
-        <div class="site-overview">
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
 
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image"
       src="/uploads/avatar.png"
       alt="汝南京">
   <p class="site-author-name" itemprop="name">汝南京</p>
-  <div class="site-description motion-element" itemprop="description">@EndureBlaze</div>
+  <div class="site-description" itemprop="description">@EndureBlaze</div>
 </div>
   <nav class="site-state motion-element">
       <div class="site-state-item site-state-posts">
@@ -422,20 +443,6 @@
             <a href="/categories/">
           
         
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
         <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">专栏</span>
         </a>
@@ -449,43 +456,7 @@
             <a href="/tags/">
           
         
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-count">17</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
@@ -537,9 +508,6 @@
 
 
 
-            
-          
-        </div>
       </div>
 
     </div>
@@ -574,8 +542,7 @@
 </div>
   <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
   <span class="post-meta-divider">|</span>
-  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.2.0</div>
-   <div>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.4.0</div> <div>
    <span id="sitetime"></span>
    <span id="year" style="display:none">2019</span> 
    <span id="month" style="display:none">7</span>   
@@ -659,54 +626,32 @@
 
 
 
+
+
+
+
         
       </div>
     </footer>
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-          <span id="scrollpercent"><span>0</span>%</span>
-        
-      </div>
-
-    
-
   </div>
 
   
-    
+
+
     
   
   <script color='0,0,255' opacity='0.5' zIndex='-1' count='150' src="/lib/canvas-nest/canvas-nest.min.js"></script>
   <script size="300" alpha="0.6" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  <script src="/lib/anime.min.js?v=3.1.0"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
   <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
   <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="/js/utils.js?v=7.4.0"></script><script src="/js/motion.js?v=7.4.0"></script>
+<script src="/js/schemes/pisces.js?v=7.4.0"></script>
 
-  <script src="/js/utils.js?v=7.2.0"></script>
-  <script src="/js/motion.js?v=7.2.0"></script>
-
-  
-  <script src="/js/affix.js?v=7.2.0"></script>
-  <script src="/js/schemes/pisces.js?v=7.2.0"></script>
-
-
-
-  
-
-  <script src="/js/next-boot.js?v=7.2.0"></script>
-
-  
-
-  
-
-  
-
-
-  
-
-
+<script src="/js/next-boot.js?v=7.4.0"></script>
 
 
 
@@ -719,18 +664,8 @@
 
 
 
+  <script src="/js/local-search.js?v=7.4.0"></script>
 
-
-
-
-
-
-
-
-
-
-
-  <script src="/js/local-search.js?v=7.2.0"></script>
 
 
 
@@ -744,9 +679,15 @@
 
 
 
-    
+  
 
-    
+  
+
+  
+
+  
+
+
 
 
 
@@ -767,12 +708,6 @@
     s.parentNode.insertBefore(bp, s);
 })();
 </script>
-
-
-
-
-  <script type="text/javascript" src="/js/src/love.js"></script>
-
 
 </body>
 </html>

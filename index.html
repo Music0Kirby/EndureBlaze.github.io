@@ -4,65 +4,62 @@
 
 
 
-<html class="theme-next gemini use-motion" lang="zh-CN">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-<meta name="generator" content="Hexo 3.9.0">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.2.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="/uploads/favicon-32x32-next.png?v=7.2.0">
-  <link rel="icon" type="image/png" sizes="16x16" href="/uploads/favicon-16x16-next.png?v=7.2.0">
-  <link rel="mask-icon" href="/images/logo.svg?v=7.2.0" color="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/uploads/favicon-32x32-next.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/uploads/favicon-16x16-next.png?v=7.4.0">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.4.0" color="#222">
+  <link rel="alternate" href="/atom.xml" title="炎忍的博客" type="application/atom+xml">
   <meta name="google-site-verification" content="true">
   <meta name="msvalidate.01" content="true">
   <meta name="yandex-verification" content="true">
   <meta name="baidu-site-verification" content="true">
 
-<link rel="stylesheet" href="/css/main.css?v=7.2.0">
+<link rel="stylesheet" href="/css/main.css?v=7.4.0">
 
 
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
-    
-  
   <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
-  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
   <link rel="stylesheet" href="/lib/pace/pace-theme-material.min.css?v=1.0.2">
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
 
 
-<script id="hexo.configurations">
+<script id="hexo-configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
     scheme: 'Gemini',
-    version: '7.2.0',
+    version: '7.4.0',
+    exturl: false,
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
     copycode: {"enable":true,"show_result":true,"style":"mac"},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
     fancybox: true,
     mediumzoom: false,
     lazyload: true,
     pangu: false,
     algolia: {
-      applicationID: '',
+      appID: '',
       apiKey: '',
       indexName: '',
       hits: {"per_page":10},
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     },
     localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
-    search: {
-      root: '/',
-      path: 'search.xml'
-    },
-    tabs: true,
+    path: 'search.xml',
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     translation: {
       copy_button: '复制',
       copy_success: '复制成功',
       copy_failure: '复制失败'
-    }
+    },
+    sidebarPadding: 40
   };
 </script>
 
@@ -77,17 +74,20 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="炎忍的博客">
 <meta name="twitter:description" content="@EndureBlaze">
-  <link rel="alternate" href="/atom.xml" title="炎忍的博客" type="application/atom+xml">
   <link rel="canonical" href="https://blog.endureblaze.cn/">
 
 
-<script id="page.configurations">
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
+    isHome: true,
+    isPost: false,
+    isPage: false,
+    isArchive: false
   };
 </script>
 
-    
   <title>炎忍的博客</title>
   
 
@@ -109,7 +109,6 @@
 
   <noscript>
   <style>
-  .use-motion .motion-element,
   .use-motion .brand,
   .use-motion .menu-item,
   .sidebar-inner,
@@ -118,7 +117,7 @@
   .use-motion .comments,
   .use-motion .post-header,
   .use-motion .post-body,
-  .use-motion .collection-title { opacity: initial; }
+  .use-motion .collection-header { opacity: initial; }
 
   .use-motion .logo,
   .use-motion .site-title,
@@ -135,15 +134,14 @@
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
-
-  <div class="container sidebar-position-left page-home">
+  <div class="container use-motion">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
+      <div class="header-inner"><div class="site-brand-container">
   <div class="site-meta">
 
-    <div class="custom-logo-site-title">
+    <div>
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">炎忍的博客</span>
@@ -164,73 +162,73 @@
 </div>
 
 
-
 <nav class="site-nav">
-    <ul id="menu" class="menu">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
         
-        
-        
-          
-          <li class="menu-item menu-item-博客首页 menu-item-active">
+        <li class="menu-item menu-item-博客首页">
       
     
 
     <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>博客首页</a>
 
   </li>
+      
+      
+      
         
-        
-        
-          
-          <li class="menu-item menu-item-文章归档">
+        <li class="menu-item menu-item-文章归档">
       
     
 
     <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>文章归档</a>
 
   </li>
+      
+      
+      
         
-        
-        
-          
-          <li class="menu-item menu-item-分类专栏">
+        <li class="menu-item menu-item-分类专栏">
       
     
 
     <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类专栏</a>
 
   </li>
+      
+      
+      
         
-        
-        
-          
-          <li class="menu-item menu-item-各种标签">
+        <li class="menu-item menu-item-各种标签">
       
     
 
     <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>各种标签</a>
 
   </li>
+      
+      
+      
         
-        
-        
-          
-          <li class="menu-item menu-item-小伙伴们">
+        <li class="menu-item menu-item-小伙伴们">
       
     
 
     <a href="/friends/" rel="section"><i class="menu-item-icon fa fa-fw fa-heart"></i> <br>小伙伴们</a>
 
   </li>
+      
+      
+      
         
-        
-        
+          
+          
           
             
             
-            
-              
-              
     
   
   <li class="menu-item menu-item-about">
@@ -242,52 +240,55 @@
   </li>
 
 
-            
-          
-            
-            
-            
-          
-            
-            
-            
           
         
-        <li class="menu-item menu-item-search">
-          <a href="javascript:;" class="popup-trigger">
           
-            <i class="menu-item-icon fa fa-search fa-fw"></i> <br>站点搜索</a>
-        </li>
+          
+          
+        
+          
+          
+          
+        
       
-    </ul>
-    <div class="site-search">
-      
-  <div class="popup search-popup local-search-popup">
-  <div class="local-search-header clearfix">
-    <span class="search-icon">
-      <i class="fa fa-search"></i>
-    </span>
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-    <div class="local-search-input-wrapper">
-      <input autocomplete="off"
-             placeholder="搜索..." spellcheck="false"
-             type="text" id="local-search-input">
-    </div>
-  </div>
-  <div id="local-search-result"></div>
-</div>
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>站点搜索</a>
+      </li>
+    
+  </ul>
 
-
-    </div>
 </nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
 
-  
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
 </div>
     </header>
 
     
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
 
 
     <main id="main" class="main">
@@ -297,14 +298,12 @@
 
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  <div id="posts" class="posts-expand">
+        <article itemscope itemtype="http://schema.org/Article">
   
   
   
-  <div class="post-block">
+  <div class="post-block home">
     <link itemprop="mainEntityOfPage" href="https://blog.endureblaze.cn/posts/417dae5e/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -317,25 +316,18 @@
       <meta itemprop="name" content="炎忍的博客">
     </span>
       <header class="post-header">
-
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/posts/417dae5e/" class="post-title-link" itemprop="url">Kirby Assistant 2.x.x更新日志</a>
-              
+        <h2 class="post-title" itemprop="name headline">
             
-          </h2>
-        
+            <a href="/posts/417dae5e/" class="post-title-link" itemprop="url">Kirby Assistant 2.x.x更新日志</a>
+          
+        </h2>
 
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
+              <span class="post-meta-item-text">发表于</span>
 
               
                 
@@ -352,9 +344,7 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">专栏：</span>
-              
+              <span class="post-meta-item-text">专栏：</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/我的-Android-应用/" itemprop="url" rel="index"><span itemprop="name">我的 Android 应用</span></a></span>
 
@@ -365,26 +355,25 @@
           
 
           
-            
           <br>
-            <span class="post-meta-item">
+            <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-file-word-o"></i>
               </span>
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span title="本文字数">176</span>
+              <span>176</span>
             </span>
           
-            <span class="post-meta-item">
+            <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
               
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
               
-              <span title="阅读时长">1 分钟</span>
+              <span>1 分钟</span>
             </span>
           
 
@@ -414,11 +403,10 @@
     
     
     
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-    </footer>
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
   </div>
   
   
@@ -426,13 +414,11 @@
   </article>
 
     
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+        <article itemscope itemtype="http://schema.org/Article">
   
   
   
-  <div class="post-block">
+  <div class="post-block home">
     <link itemprop="mainEntityOfPage" href="https://blog.endureblaze.cn/posts/6b0c894/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -445,25 +431,18 @@
       <meta itemprop="name" content="炎忍的博客">
     </span>
       <header class="post-header">
-
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/posts/6b0c894/" class="post-title-link" itemprop="url">动态替换 ViewPager 里面的 Fragment</a>
-              
+        <h2 class="post-title" itemprop="name headline">
             
-          </h2>
-        
+            <a href="/posts/6b0c894/" class="post-title-link" itemprop="url">动态替换 ViewPager 里面的 Fragment</a>
+          
+        </h2>
 
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
+              <span class="post-meta-item-text">发表于</span>
 
               
                 
@@ -480,9 +459,7 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">专栏：</span>
-              
+              <span class="post-meta-item-text">专栏：</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/编程/" itemprop="url" rel="index"><span itemprop="name">编程</span></a></span>
 
@@ -493,26 +470,25 @@
           
 
           
-            
           <br>
-            <span class="post-meta-item">
+            <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-file-word-o"></i>
               </span>
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span title="本文字数">3.1k</span>
+              <span>3.1k</span>
             </span>
           
-            <span class="post-meta-item">
+            <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
               
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
               
-              <span title="阅读时长">5 分钟</span>
+              <span>5 分钟</span>
             </span>
           
 
@@ -542,11 +518,10 @@
     
     
     
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-    </footer>
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
   </div>
   
   
@@ -554,13 +529,11 @@
   </article>
 
     
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+        <article itemscope itemtype="http://schema.org/Article">
   
   
   
-  <div class="post-block">
+  <div class="post-block home">
     <link itemprop="mainEntityOfPage" href="https://blog.endureblaze.cn/posts/919199f6/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -573,25 +546,18 @@
       <meta itemprop="name" content="炎忍的博客">
     </span>
       <header class="post-header">
-
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/posts/919199f6/" class="post-title-link" itemprop="url">实现滑动隐藏 ToolBar 与 BottomNavigation</a>
-              
+        <h2 class="post-title" itemprop="name headline">
             
-          </h2>
-        
+            <a href="/posts/919199f6/" class="post-title-link" itemprop="url">实现滑动隐藏 ToolBar 与 BottomNavigation</a>
+          
+        </h2>
 
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
+              <span class="post-meta-item-text">发表于</span>
 
               
                 
@@ -607,9 +573,7 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2019-08-29 13:39:04" itemprop="dateModified" datetime="2019-08-29T13:39:04+08:00">2019-08-29</time>
               </span>
             
@@ -618,9 +582,7 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">专栏：</span>
-              
+              <span class="post-meta-item-text">专栏：</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/编程/" itemprop="url" rel="index"><span itemprop="name">编程</span></a></span>
 
@@ -631,26 +593,25 @@
           
 
           
-            
           <br>
-            <span class="post-meta-item">
+            <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-file-word-o"></i>
               </span>
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span title="本文字数">12k</span>
+              <span>12k</span>
             </span>
           
-            <span class="post-meta-item">
+            <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
               
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
               
-              <span title="阅读时长">21 分钟</span>
+              <span>21 分钟</span>
             </span>
           
 
@@ -680,11 +641,10 @@
     
     
     
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-    </footer>
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
   </div>
   
   
@@ -692,13 +652,11 @@
   </article>
 
     
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+        <article itemscope itemtype="http://schema.org/Article">
   
   
   
-  <div class="post-block">
+  <div class="post-block home">
     <link itemprop="mainEntityOfPage" href="https://blog.endureblaze.cn/posts/a505f9a9/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -711,25 +669,18 @@
       <meta itemprop="name" content="炎忍的博客">
     </span>
       <header class="post-header">
-
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/posts/a505f9a9/" class="post-title-link" itemprop="url">Kirby Assistant 编年史</a>
-              
+        <h2 class="post-title" itemprop="name headline">
             
-          </h2>
-        
+            <a href="/posts/a505f9a9/" class="post-title-link" itemprop="url">Kirby Assistant 编年史</a>
+          
+        </h2>
 
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
+              <span class="post-meta-item-text">发表于</span>
 
               
                 
@@ -745,9 +696,7 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2019-08-29 13:49:48" itemprop="dateModified" datetime="2019-08-29T13:49:48+08:00">2019-08-29</time>
               </span>
             
@@ -756,9 +705,7 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">专栏：</span>
-              
+              <span class="post-meta-item-text">专栏：</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/我的-Android-应用/" itemprop="url" rel="index"><span itemprop="name">我的 Android 应用</span></a></span>
 
@@ -769,26 +716,25 @@
           
 
           
-            
           <br>
-            <span class="post-meta-item">
+            <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-file-word-o"></i>
               </span>
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span title="本文字数">5.3k</span>
+              <span>5.3k</span>
             </span>
           
-            <span class="post-meta-item">
+            <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
               
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
               
-              <span title="阅读时长">9 分钟</span>
+              <span>9 分钟</span>
             </span>
           
 
@@ -820,11 +766,10 @@
     
     
     
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-    </footer>
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
   </div>
   
   
@@ -832,13 +777,11 @@
   </article>
 
     
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+        <article itemscope itemtype="http://schema.org/Article">
   
   
   
-  <div class="post-block">
+  <div class="post-block home">
     <link itemprop="mainEntityOfPage" href="https://blog.endureblaze.cn/posts/b36c6159/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -851,25 +794,18 @@
       <meta itemprop="name" content="炎忍的博客">
     </span>
       <header class="post-header">
-
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/posts/b36c6159/" class="post-title-link" itemprop="url">记一些 Hexo 报错</a>
-              
+        <h2 class="post-title" itemprop="name headline">
             
-          </h2>
-        
+            <a href="/posts/b36c6159/" class="post-title-link" itemprop="url">记一些 Hexo 报错</a>
+          
+        </h2>
 
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
+              <span class="post-meta-item-text">发表于</span>
 
               
                 
@@ -886,9 +822,7 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">专栏：</span>
-              
+              <span class="post-meta-item-text">专栏：</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/技术记录/" itemprop="url" rel="index"><span itemprop="name">技术记录</span></a></span>
 
@@ -899,26 +833,25 @@
           
 
           
-            
           <br>
-            <span class="post-meta-item">
+            <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-file-word-o"></i>
               </span>
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span title="本文字数">226</span>
+              <span>226</span>
             </span>
           
-            <span class="post-meta-item">
+            <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
               
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
               
-              <span title="阅读时长">1 分钟</span>
+              <span>1 分钟</span>
             </span>
           
 
@@ -950,11 +883,10 @@
     
     
     
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-    </footer>
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
   </div>
   
   
@@ -962,13 +894,11 @@
   </article>
 
     
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+        <article itemscope itemtype="http://schema.org/Article">
   
   
   
-  <div class="post-block">
+  <div class="post-block home">
     <link itemprop="mainEntityOfPage" href="https://blog.endureblaze.cn/posts/a6366ad5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -981,25 +911,18 @@
       <meta itemprop="name" content="炎忍的博客">
     </span>
       <header class="post-header">
-
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/posts/a6366ad5/" class="post-title-link" itemprop="url">我为什么要搭建博客</a>
-              
+        <h2 class="post-title" itemprop="name headline">
             
-          </h2>
-        
+            <a href="/posts/a6366ad5/" class="post-title-link" itemprop="url">我为什么要搭建博客</a>
+          
+        </h2>
 
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
+              <span class="post-meta-item-text">发表于</span>
 
               
                 
@@ -1016,9 +939,7 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">专栏：</span>
-              
+              <span class="post-meta-item-text">专栏：</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/随手记/" itemprop="url" rel="index"><span itemprop="name">随手记</span></a></span>
 
@@ -1029,26 +950,25 @@
           
 
           
-            
           <br>
-            <span class="post-meta-item">
+            <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-file-word-o"></i>
               </span>
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span title="本文字数">813</span>
+              <span>813</span>
             </span>
           
-            <span class="post-meta-item">
+            <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
               
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
               
-              <span title="阅读时长">1 分钟</span>
+              <span>1 分钟</span>
             </span>
           
 
@@ -1080,11 +1000,10 @@
     
     
     
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-    </footer>
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
   </div>
   
   
@@ -1092,13 +1011,11 @@
   </article>
 
     
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+        <article itemscope itemtype="http://schema.org/Article">
   
   
   
-  <div class="post-block">
+  <div class="post-block home">
     <link itemprop="mainEntityOfPage" href="https://blog.endureblaze.cn/posts/d46d4e39/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1111,25 +1028,18 @@
       <meta itemprop="name" content="炎忍的博客">
     </span>
       <header class="post-header">
-
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/posts/d46d4e39/" class="post-title-link" itemprop="url">偶然间在B站看到的鬼畜</a>
-              
+        <h2 class="post-title" itemprop="name headline">
             
-          </h2>
-        
+            <a href="/posts/d46d4e39/" class="post-title-link" itemprop="url">偶然间在B站看到的鬼畜</a>
+          
+        </h2>
 
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
+              <span class="post-meta-item-text">发表于</span>
 
               
                 
@@ -1146,9 +1056,7 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">专栏：</span>
-              
+              <span class="post-meta-item-text">专栏：</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/碎碎念/" itemprop="url" rel="index"><span itemprop="name">碎碎念</span></a></span>
 
@@ -1159,26 +1067,25 @@
           
 
           
-            
           <br>
-            <span class="post-meta-item">
+            <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-file-word-o"></i>
               </span>
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span title="本文字数">793</span>
+              <span>793</span>
             </span>
           
-            <span class="post-meta-item">
+            <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
               
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
               
-              <span title="阅读时长">1 分钟</span>
+              <span>1 分钟</span>
             </span>
           
 
@@ -1208,11 +1115,10 @@
     
     
     
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-    </footer>
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
   </div>
   
   
@@ -1220,13 +1126,11 @@
   </article>
 
     
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+        <article itemscope itemtype="http://schema.org/Article">
   
   
   
-  <div class="post-block">
+  <div class="post-block home">
     <link itemprop="mainEntityOfPage" href="https://blog.endureblaze.cn/posts/dc790cfc/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1239,25 +1143,18 @@
       <meta itemprop="name" content="炎忍的博客">
     </span>
       <header class="post-header">
-
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/posts/dc790cfc/" class="post-title-link" itemprop="url">一些 WordPress 主题</a>
-              
+        <h2 class="post-title" itemprop="name headline">
             
-          </h2>
-        
+            <a href="/posts/dc790cfc/" class="post-title-link" itemprop="url">一些 WordPress 主题</a>
+          
+        </h2>
 
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
+              <span class="post-meta-item-text">发表于</span>
 
               
                 
@@ -1273,9 +1170,7 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2019-08-02 18:13:08" itemprop="dateModified" datetime="2019-08-02T18:13:08+08:00">2019-08-02</time>
               </span>
             
@@ -1284,9 +1179,7 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">专栏：</span>
-              
+              <span class="post-meta-item-text">专栏：</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/资源/" itemprop="url" rel="index"><span itemprop="name">资源</span></a></span>
 
@@ -1297,26 +1190,25 @@
           
 
           
-            
           <br>
-            <span class="post-meta-item">
+            <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-file-word-o"></i>
               </span>
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span title="本文字数">271</span>
+              <span>271</span>
             </span>
           
-            <span class="post-meta-item">
+            <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
               
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
               
-              <span title="阅读时长">1 分钟</span>
+              <span>1 分钟</span>
             </span>
           
 
@@ -1346,11 +1238,10 @@
     
     
     
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-    </footer>
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
   </div>
   
   
@@ -1358,13 +1249,11 @@
   </article>
 
     
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+        <article itemscope itemtype="http://schema.org/Article">
   
   
   
-  <div class="post-block">
+  <div class="post-block home">
     <link itemprop="mainEntityOfPage" href="https://blog.endureblaze.cn/posts/cd1c3d2a/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1377,25 +1266,18 @@
       <meta itemprop="name" content="炎忍的博客">
     </span>
       <header class="post-header">
-
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/posts/cd1c3d2a/" class="post-title-link" itemprop="url">Windows 软件推荐</a>
-              
+        <h2 class="post-title" itemprop="name headline">
             
-          </h2>
-        
+            <a href="/posts/cd1c3d2a/" class="post-title-link" itemprop="url">Windows 软件推荐</a>
+          
+        </h2>
 
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
+              <span class="post-meta-item-text">发表于</span>
 
               
                 
@@ -1411,9 +1293,7 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2019-09-03 22:39:35" itemprop="dateModified" datetime="2019-09-03T22:39:35+08:00">2019-09-03</time>
               </span>
             
@@ -1422,9 +1302,7 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">专栏：</span>
-              
+              <span class="post-meta-item-text">专栏：</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/资源/" itemprop="url" rel="index"><span itemprop="name">资源</span></a></span>
 
@@ -1435,26 +1313,25 @@
           
 
           
-            
           <br>
-            <span class="post-meta-item">
+            <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-file-word-o"></i>
               </span>
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span title="本文字数">2k</span>
+              <span>2k</span>
             </span>
           
-            <span class="post-meta-item">
+            <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
               
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
               
-              <span title="阅读时长">3 分钟</span>
+              <span>3 分钟</span>
             </span>
           
 
@@ -1484,11 +1361,10 @@
     
     
     
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-    </footer>
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
   </div>
   
   
@@ -1496,13 +1372,11 @@
   </article>
 
     
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+        <article itemscope itemtype="http://schema.org/Article">
   
   
   
-  <div class="post-block">
+  <div class="post-block home">
     <link itemprop="mainEntityOfPage" href="https://blog.endureblaze.cn/posts/75f0fab2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1515,25 +1389,18 @@
       <meta itemprop="name" content="炎忍的博客">
     </span>
       <header class="post-header">
-
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/posts/75f0fab2/" class="post-title-link" itemprop="url">记一次 WordPress 搭建与宝塔面板配置</a>
-              
+        <h2 class="post-title" itemprop="name headline">
             
-          </h2>
-        
+            <a href="/posts/75f0fab2/" class="post-title-link" itemprop="url">记一次 WordPress 搭建与宝塔面板配置</a>
+          
+        </h2>
 
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
+              <span class="post-meta-item-text">发表于</span>
 
               
                 
@@ -1549,9 +1416,7 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2019-09-03 22:26:15" itemprop="dateModified" datetime="2019-09-03T22:26:15+08:00">2019-09-03</time>
               </span>
             
@@ -1560,9 +1425,7 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">专栏：</span>
-              
+              <span class="post-meta-item-text">专栏：</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/技术记录/" itemprop="url" rel="index"><span itemprop="name">技术记录</span></a></span>
 
@@ -1573,26 +1436,25 @@
           
 
           
-            
           <br>
-            <span class="post-meta-item">
+            <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-file-word-o"></i>
               </span>
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span title="本文字数">3.6k</span>
+              <span>3.6k</span>
             </span>
           
-            <span class="post-meta-item">
+            <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
               
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
               
-              <span title="阅读时长">6 分钟</span>
+              <span>6 分钟</span>
             </span>
           
 
@@ -1622,11 +1484,10 @@
     
     
     
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-    </footer>
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
   </div>
   
   
@@ -1634,7 +1495,7 @@
   </article>
 
     
-  </section>
+  </div>
 
   
   <nav class="pagination">
@@ -1656,18 +1517,30 @@
     </div>
   </div>
 
-  <aside id="sidebar" class="sidebar">
+  <aside class="sidebar">
     <div class="sidebar-inner">
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
-        <div class="site-overview">
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
 
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image"
       src="/uploads/avatar.png"
       alt="汝南京">
   <p class="site-author-name" itemprop="name">汝南京</p>
-  <div class="site-description motion-element" itemprop="description">@EndureBlaze</div>
+  <div class="site-description" itemprop="description">@EndureBlaze</div>
 </div>
   <nav class="site-state motion-element">
       <div class="site-state-item site-state-posts">
@@ -1687,20 +1560,6 @@
             <a href="/categories/">
           
         
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
         <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">专栏</span>
         </a>
@@ -1714,43 +1573,7 @@
             <a href="/tags/">
           
         
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-count">17</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
@@ -1802,9 +1625,6 @@
 
 
 
-            
-          
-        </div>
       </div>
 
     </div>
@@ -1839,8 +1659,7 @@
 </div>
   <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
   <span class="post-meta-divider">|</span>
-  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.2.0</div>
-   <div>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.4.0</div> <div>
    <span id="sitetime"></span>
    <span id="year" style="display:none">2019</span> 
    <span id="month" style="display:none">7</span>   
@@ -1924,44 +1743,83 @@
 
 
 
+
+
+
+
         
       </div>
     </footer>
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-          <span id="scrollpercent"><span>0</span>%</span>
-        
-      </div>
-
-    
-
   </div>
 
   
-    
+
+
     
   
   <script color='0,0,255' opacity='0.5' zIndex='-1' count='150' src="/lib/canvas-nest/canvas-nest.min.js"></script>
   <script size="300" alpha="0.6" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  <script src="/lib/anime.min.js?v=3.1.0"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
   <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
   <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="/js/utils.js?v=7.4.0"></script><script src="/js/motion.js?v=7.4.0"></script>
+<script src="/js/schemes/pisces.js?v=7.4.0"></script>
 
-  <script src="/js/utils.js?v=7.2.0"></script>
-  <script src="/js/motion.js?v=7.2.0"></script>
-
-  
-  <script src="/js/affix.js?v=7.2.0"></script>
-  <script src="/js/schemes/pisces.js?v=7.2.0"></script>
+<script src="/js/next-boot.js?v=7.4.0"></script>
 
 
 
   
 
-  <script src="/js/next-boot.js?v=7.2.0"></script>
 
+
+
+
+
+
+
+  <script src="/js/local-search.js?v=7.4.0"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
   
 
   
@@ -1969,71 +1827,6 @@
   
 
 
-  
-
-
-
-
-
-  
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <script src="/js/local-search.js?v=7.2.0"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-    
 
 
 
@@ -2054,12 +1847,6 @@
     s.parentNode.insertBefore(bp, s);
 })();
 </script>
-
-
-
-
-  <script type="text/javascript" src="/js/src/love.js"></script>
-
 
 </body>
 </html>
