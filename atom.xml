@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.endureblaze.cn/"/>
-  <updated>2019-09-10T15:26:18.486Z</updated>
+  <updated>2019-09-29T12:18:22.839Z</updated>
   <id>https://blog.endureblaze.cn/</id>
   
   <author>
@@ -21,13 +21,13 @@
     <link href="https://blog.endureblaze.cn/posts/417dae5e/"/>
     <id>https://blog.endureblaze.cn/posts/417dae5e/</id>
     <published>2019-09-10T04:51:28.000Z</published>
-    <updated>2019-09-10T15:26:18.486Z</updated>
+    <updated>2019-09-29T12:18:22.839Z</updated>
     
-    <content type="html"><![CDATA[<p>目前最新版本 v2.0.0 (50)</p><a id="more"></a> <h3 id="v2-0-0-50"><a href="#v2-0-0-50" class="headerlink" title="v2.0.0 (50)"></a>v2.0.0 (50)</h3><p>1.全新api重新编写<br>2.大部分 MD2 特性<br>3.修复底栏切换过快崩溃的bug<br>4.新增黑暗模式<br>5.假装无缝切换主题<br>6.优化用户信息修改后刷新操作<br>7.优化菜单显示方式<br>8.防止未登录情况下进入闲聊的问题<br>9.重新优化的对话框<br>10.应用内清除缓存<br>11.重写头像裁剪<br>12.上传逻辑<br>13.全新官网 </p>]]></content>
+    <content type="html"><![CDATA[<p>目前最新版本 v2.0.1 (51)</p><a id="more"></a> <h3 id="v2-0-0-51"><a href="#v2-0-0-51" class="headerlink" title="v2.0.0 (51)"></a>v2.0.0 (51)</h3><p>1.自动根据 AndroidQ 夜间模式选项切换夜间模式<br>2.翻译文本修正<br>3.图片资源修复</p><h3 id="v2-0-0-50"><a href="#v2-0-0-50" class="headerlink" title="v2.0.0 (50)"></a>v2.0.0 (50)</h3><p>1.全新api重新编写<br>2.大部分 MD2 特性<br>3.修复底栏切换过快崩溃的bug<br>4.新增黑暗模式<br>5.假装无缝切换主题<br>6.优化用户信息修改后刷新操作<br>7.优化菜单显示方式<br>8.防止未登录情况下进入闲聊的问题<br>9.重新优化的对话框<br>10.应用内清除缓存<br>11.重写头像裁剪<br>12.上传逻辑<br>13.全新官网 </p>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;目前最新版本 v2.0.0 (50)&lt;/p&gt;
+      &lt;p&gt;目前最新版本 v2.0.1 (51)&lt;/p&gt;
     
     </summary>
     
